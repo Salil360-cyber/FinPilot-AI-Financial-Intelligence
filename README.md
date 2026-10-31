@@ -66,49 +66,49 @@ Develop an integrated financial intelligence platform that brings financial work
 
 The overview dashboard consolidates key financial indicators, including total expenses, processed invoices, reconciliation rate, outstanding items, and operating trends.
 
-![Financial Operations Overview](screenshots/01-financial-overview.png)
+![Financial Operations Overview](<Financial Overview .png>)
 
 ### 2. Invoice Intelligence
 
 Supports invoice document upload and OCR-related extraction workflows, mathematical validation, and invoice processing.
 
-![Invoice Intelligence](screenshots/02-invoice-intelligence.png)
+![Invoice Intelligence](<Invoice Intelligence .png>)
 
 ### 3. Expense Ledger
 
 Provides a general ledger and expense management interface with transaction records, debit and credit information, filtering, CSV import/export, and validation workflows.
 
-![Expense Ledger](screenshots/03-expense-ledger.png)
+![Expense Ledger](<Expense Ledger .png>)
 
 ### 4. Invoice Generator
 
 Supports customer invoice creation, invoice tracking, outstanding balance monitoring, and payment status visibility.
 
-![Invoice Generator](screenshots/04-invoice-generator.png)
+![Invoice Generator](<Invoice Generator .png>)
 
 ### 5. Bank Reconciliation
 
 Provides a workflow for comparing bank statement entries with general ledger records, identifying unmatched transactions, reviewing exceptions, and tracking reconciliation status.
 
-![Bank Reconciliation](screenshots/05-bank-reconciliation.png)
+![Bank Reconciliation](<Bank Reconciliation .png>)
 
 ### 6. Financial Analytics
 
 Presents financial analysis views covering revenue, expenses, profitability, financial ratios, period comparisons, and cash movement.
 
-![Financial Analytics](screenshots/06-financial-analytics.png)
+![Financial Analytics](<Fianacial Analytics .png>)
 
 ### 7. AI Financial Advisory
 
 Provides AI-assisted financial decision-support features, including diagnostic findings, prioritized action items, and what-if scenario modeling.
 
-![AI Financial Advisory](screenshots/07-ai-financial-advisory.png)
+![AI Financial Advisory](<AI Financial Advisory .png>)
 
 ### 8. Help Center & Workflow Guidance
 
 Includes guided financial workflows, a knowledge base, FAQs, a financial glossary, and onboarding guidance.
 
-![Help Center & Workflow Guidance](screenshots/08-help-workflows.png)
+![Help Center & Workflows](<Help Center Workflows .png>)
 
 ## Features
 
