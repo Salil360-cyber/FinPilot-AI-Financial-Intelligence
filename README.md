@@ -2,8 +2,6 @@
 AI-assisted financial operations platform with invoice OCR, expense management, bank reconciliation, financial analytics, forecasting, and reporting.
 # FinPilot AI – Financial Data Intelligence & Operational Risk Platform
 
-![FinPilot AI](screenshots/01-financial-overview.png)
-
 ## Overview
 
 FinPilot AI is an integrated financial operations and intelligence platform designed to bring invoice processing, expense and ledger management, invoice generation, bank reconciliation, financial analytics, revenue forecasting, AI-assisted financial advisory, and executive reporting into one application.
