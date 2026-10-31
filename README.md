@@ -72,7 +72,7 @@ The overview dashboard consolidates key financial indicators, including total ex
 
 Supports invoice document upload and OCR-related extraction workflows, mathematical validation, and invoice processing.
 
-![Invoice Intelligence](<Invoice%20Intelligence%20.png>)
+![Invoice Intelligence](./invoice-intelligence.png)
 
 ### 3. Expense Ledger
 
