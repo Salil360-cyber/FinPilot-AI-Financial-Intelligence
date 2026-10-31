@@ -66,13 +66,13 @@ Develop an integrated financial intelligence platform that brings financial work
 
 The overview dashboard consolidates key financial indicators, including total expenses, processed invoices, reconciliation rate, outstanding items, and operating trends.
 
-![Financial Operations Overview](<Financial Overview .png>)
+![Financial Operations Overview](01-financial-overview.png)
 
 ### 2. Invoice Intelligence
 
 Supports invoice document upload and OCR-related extraction workflows, mathematical validation, and invoice processing.
 
-![Invoice Intelligence](<Invoice Intelligence .png>)
+![Invoice Intelligence](02-invoice-intelligence.png)
 
 ### 3. Expense Ledger
 
@@ -108,7 +108,7 @@ Provides AI-assisted financial decision-support features, including diagnostic f
 
 Includes guided financial workflows, a knowledge base, FAQs, a financial glossary, and onboarding guidance.
 
-![Help Center & Workflows](<Help Center Workflows .png>)
+![Help Center](08-help-center-workflows.png)
 
 ## Features
 
