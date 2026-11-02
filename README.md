@@ -1,5 +1,3 @@
-# FinPilot-AI-Financial-Intelligence
-AI-assisted financial operations platform with invoice OCR, expense management, bank reconciliation, financial analytics, forecasting, and reporting.
 # FinPilot AI – Financial Data Intelligence & Operational Risk Platform
 
 ## Overview
@@ -53,7 +51,7 @@ Develop an integrated financial intelligence platform that brings financial work
 
 ### 4. Result
 
-- Recorded **295/295 passing test cases** across documented test phases and the cross-module consistency suite.
+- Built 12 test suites with **295 test cases** in total. The 285 that run outside the browser pass with `npm test` (285/285); the 10 Invoice Intelligence (Phase 2) tests run inside the app.
 - Documented checks for financial reporting consistency, currency formatting, and spreadsheet-export security.
 - Built an integrated demonstration of invoice processing, ledger management, reconciliation, financial analytics, and reporting workflows.
 - Identified limitations requiring human review, particularly for complex OCR extraction.
@@ -64,49 +62,49 @@ Develop an integrated financial intelligence platform that brings financial work
 
 The overview dashboard consolidates key financial indicators, including total expenses, processed invoices, reconciliation rate, outstanding items, and operating trends.
 
-![Financial Operations Overview](<Finanacial%20Overview.png>)
+![Financial Operations Overview](docs/screenshots/01-financial-overview.png)
 
 ### 2. Invoice Intelligence
 
 Supports invoice document upload and OCR-related extraction workflows, mathematical validation, and invoice processing.
 
-![Invoice Intelligence](./invoice-intelligence.png)
+![Invoice Intelligence](docs/screenshots/02-invoice-intelligence.png)
 
 ### 3. Expense Ledger
 
 Provides a general ledger and expense management interface with transaction records, debit and credit information, filtering, CSV import/export, and validation workflows.
 
-![Expense Ledger](<Expense Ledger .png>)
+![Expense Ledger](docs/screenshots/03-expense-ledger.png)
 
 ### 4. Invoice Generator
 
 Supports customer invoice creation, invoice tracking, outstanding balance monitoring, and payment status visibility.
 
-![Invoice Generator](<Invoice Generator .png>)
+![Invoice Generator](docs/screenshots/04-invoice-generator.png)
 
 ### 5. Bank Reconciliation
 
 Provides a workflow for comparing bank statement entries with general ledger records, identifying unmatched transactions, reviewing exceptions, and tracking reconciliation status.
 
-![Bank Reconciliation](<Bank Reconciliation .png>)
+![Bank Reconciliation](docs/screenshots/05-bank-reconciliation.png)
 
 ### 6. Financial Analytics
 
 Presents financial analysis views covering revenue, expenses, profitability, financial ratios, period comparisons, and cash movement.
 
-![Financial Analytics](<Fianacial Analytics .png>)
+![Financial Analytics](docs/screenshots/06-financial-analytics.png)
 
 ### 7. AI Financial Advisory
 
 Provides AI-assisted financial decision-support features, including diagnostic findings, prioritized action items, and what-if scenario modeling.
 
-![AI Financial Advisory](<AI Financial Advisory .png>)
+![AI Financial Advisory](docs/screenshots/07-ai-financial-advisory.png)
 
 ### 8. Help Center & Workflow Guidance
 
 Includes guided financial workflows, a knowledge base, FAQs, a financial glossary, and onboarding guidance.
 
-![Help Center Workflows](<Help%20Center%20Workflows.png>)
+![Help Center Workflows](docs/screenshots/08-help-center-workflows.png)
 
 ## Features
 
@@ -136,7 +134,15 @@ Includes guided financial workflows, a knowledge base, FAQs, a financial glossar
 
 ## Testing & Quality Checks
 
-The documented project QA results report **295 passing test cases out of 295 test cases** across the specified test phases and cross-module consistency suite.
+The project has **12 test suites with 295 test cases**:
+
+| Suite | Tests | How it runs |
+|---|---|---|
+| Phases 3–12 (ledger, invoicing, reconciliation, analytics, forecasting, annual reports, advisory, executive reports, settings, help center) | 275 | `npm test` |
+| Cross-module consistency | 10 | `npm test` |
+| Phase 2 – Invoice Intelligence | 10 | Inside the app (React component) |
+
+`npm test` runs the 285 headless tests with an in-memory replacement for the browser's localStorage. Current result: **285/285 passed**. `npm run lint` (TypeScript type-check) passes with no errors, and `npm run build` produces the production bundle.
 
 Documented checks include:
 
@@ -147,6 +153,32 @@ Documented checks include:
 - CSV formula-injection safeguards
 
 The reported pass rate is based on the documented test suite. It is not a claim of complete code coverage or a guarantee that the application is bug-free.
+
+## Run Locally
+
+**Prerequisites:** Node.js 20 or newer.
+
+```bash
+npm install
+cp .env.example .env         # add your own GEMINI_API_KEY (optional: the app falls back to rule-based logic without it)
+npm run dev                  # starts the app on http://localhost:3000
+npm test                     # runs the 285 headless test cases
+npm run lint                 # TypeScript type-check
+```
+
+Never commit a real API key; `.env*` files are git-ignored (only `.env.example` is tracked).
+
+## Project Structure
+
+| Path | Contents |
+|---|---|
+| `src/pages/` | One page per module (overview, invoices, ledger, reconciliation, analytics, forecast, advisory, reports, settings, help) |
+| `src/components/` | UI components, grouped by module |
+| `src/services/` | Calculation engines, validators, Gemini integration and the test suites |
+| `src/data/` | Demo data, glossary and help articles |
+| `server.ts` | Express server (serves the app and the Gemini API route) |
+| `scripts/run-test-suites.ts` | Headless test runner used by `npm test` |
+| `docs/` | QA report, known limitations, screenshots |
 
 ## Known Limitations
 
